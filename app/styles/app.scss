@@ -3,6 +3,7 @@ $red: #F77565;
 $orange: #FFB877;
 $pink: #F98FD2;
 $blue: #525CFF;
+$green: #21b22a;
 
 .inline {
   display: inline-block;
@@ -36,4 +37,8 @@ $blue: #525CFF;
 
 .blue {
   color: $blue;
+}
+
+.green {
+  color: $green;
 }

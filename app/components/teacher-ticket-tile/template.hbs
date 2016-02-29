@@ -2,7 +2,6 @@
   <div class="well well-sm">
     <h1>{{pair}} <span class="float-right {{color-location ticket.location}}">{{ticket.location}}</span></h1>
     <p>{{ticket.question}}</p>
-    <h4>{{moment-from-now ticket.timestamp}}</h4>
-    {{time-color ticket.timestamp}}
+    <h4 class="{{time-color ticket.timestamp}}">{{moment-from-now ticket.timestamp}}</h4>
   </div>
 </div>
