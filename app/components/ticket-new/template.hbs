@@ -1,0 +1,19 @@
+<form class="form-horizontal">
+  <div class="form-group inline padding-right">
+    <label for="name1">Enter a pair's name</label>
+    {{input value=name1 id="name1" class="form-control" placeholder="Name"}}
+  </div>
+  <div class="form-group inline">
+    <label for="name2">Enter a pair's name</label>
+    {{input value=name2 id="name2" class="form-control" placeholder="Name"}}
+  </div>
+  <div class="form-group">
+    <label for="location">Enter your location</label>
+    {{input value=location id="location" class="form-control" placeholder="Location"}}
+  </div>
+  <div class="form-group">
+    <label for="question">Enter your question</label>
+    {{textarea value=question id="question" cols="80" rows="20" class="form-control" placeholder="Question here..."}}
+  </div>
+  <button {{action 'saveTicket'}}>Save</button>
+</form>

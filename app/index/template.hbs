@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-6">
+    {{ticket-new saveTicket="saveTicket"}}
+  </div>
+  <div class="col-md-6">
+    {{#each model as |ticket|}}
+      {{ticket-tile ticket=ticket}}
+    {{/each}}
+  </div>
+</div>
