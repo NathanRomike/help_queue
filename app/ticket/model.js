@@ -5,5 +5,6 @@ export default DS.Model.extend({
   name2: DS.attr(),
   location: DS.attr(),
   question: DS.attr(),
-  timestamp: DS.attr()
+  timestamp: DS.attr(),
+  isSolved: DS.attr(),
 });

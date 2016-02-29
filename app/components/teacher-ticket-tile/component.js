@@ -5,12 +5,6 @@ export default Ember.Component.extend({
     return this.get('ticket.name1')+ ' & ' + this.get('ticket.name2');
   }),
 
-  // created: Ember.computed('createdTime', function () {
-  //   this.currentTimeMetronome();
-  //   // console.log(this.get(cTime()));
-  //   return cTime();
-  // }),
-
   currentTimeMetronome: function() {
     var interval = 1000;
     Ember.run.later(this, function() {
@@ -26,7 +20,10 @@ export default Ember.Component.extend({
 
   actions: {
     closeTicket(ticket) {
-      ticket.destroyRecord();
+      if(confirm("Are you sure?")) {
+        ticket.set('isSolved', true);
+        ticket.save();
+      }
     }
   }
 });

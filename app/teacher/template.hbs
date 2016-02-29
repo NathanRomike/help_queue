@@ -1,5 +1,6 @@
 
 {{#each model as |ticket|}}
-<!-- {{log createdTime}} -->
-  {{teacher-ticket-tile ticket=ticket createdTime=ticket.createdTime}}
+  {{#unless ticket.isSolved}}
+    {{teacher-ticket-tile ticket=ticket createdTime=ticket.createdTime}}
+  {{/unless}}
 {{/each}}

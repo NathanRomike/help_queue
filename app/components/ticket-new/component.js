@@ -8,7 +8,8 @@ export default Ember.Component.extend({
         name2: this.get('name2'),
         location: this.get('location'),
         question: this.get('question'),
-        timestamp: Date.now()
+        timestamp: Date.now(),
+        isSolved: false
       };
       this.set('name1', '');
       this.set('name2', '');
