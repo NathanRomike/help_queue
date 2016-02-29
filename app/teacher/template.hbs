@@ -1,3 +1,5 @@
+
 {{#each model as |ticket|}}
-  {{teacher-ticket-tile ticket=ticket}}
+<!-- {{log createdTime}} -->
+  {{teacher-ticket-tile ticket=ticket createdTime=ticket.createdTime}}
 {{/each}}

@@ -5,6 +5,12 @@ export default Ember.Route.extend({
     return this.store.findAll('ticket');
   },
 
+  // createdTime: Ember.computed('createdTime', function () {
+  //   this.currentTimeMetronome();
+  //   console.log(this.get(cTime()));
+  //   return this.get(cTime());
+  // }),
+
   currentTimeMetronome: function() {
     var interval = 1000;
     Ember.run.later(this, function() {
@@ -13,7 +19,8 @@ export default Ember.Route.extend({
     }, interval);
   }.on('init'),
 
-  createdTime: function () {
+  cTime: function () {
+    console.log(this.get('ticket'));
     return this.get('timestamp');
   }.property('currentTimePulse'),
 });
