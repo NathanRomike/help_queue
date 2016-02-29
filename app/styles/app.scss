@@ -1,0 +1,39 @@
+$yellow: #CCDA2B;
+$red: #F77565;
+$orange: #FFB877;
+$pink: #F98FD2;
+$blue: #525CFF;
+
+.inline {
+  display: inline-block;
+  width: 50%;
+}
+
+.padding-right {
+  margin-right: 40px !important;
+}
+
+.float-right {
+  float: right;
+  padding-right: 10px;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.red {
+  color: $red;
+}
+
+.orange {
+  color: $orange;
+}
+
+.pink {
+  color: $pink;
+}
+
+.blue {
+  color: $blue;
+}
