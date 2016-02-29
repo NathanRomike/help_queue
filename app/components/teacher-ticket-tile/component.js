@@ -21,8 +21,12 @@ export default Ember.Component.extend({
 
   cTime: function () {
     var ticket = this.get('ticket');
-    console.log(ticket.get('timestamp'));
     return ticket.get('timestamp');
   }.property('currentTimePulse'),
 
+  actions: {
+    closeTicket(ticket) {
+      ticket.destroyRecord();
+    }
+  }
 });

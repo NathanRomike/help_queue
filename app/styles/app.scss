@@ -1,9 +1,9 @@
-$yellow: #CCDA2B;
+$yellow: #F9E649;
 $red: #F77565;
 $orange: #FFB877;
 $pink: #F98FD2;
 $blue: #525CFF;
-$green: #21b22a;
+$green: #66E26D;
 
 .inline {
   display: inline-block;
@@ -17,6 +17,22 @@ $green: #21b22a;
 .float-right {
   float: right;
   padding-right: 10px;
+  background-color: #F5F5F5;
+  padding: 10px;
+  border-radius: 100px;
+  text-shadow: 1px 3px 8px grey;
+}
+
+.ticket-red {
+  background-color: $red;
+}
+
+.ticket-green {
+  background-color: $green;
+}
+
+.ticket-yellow {
+  background-color: $yellow;
 }
 
 .yellow {
@@ -41,4 +57,8 @@ $green: #21b22a;
 
 .green {
   color: $green;
+}
+
+.ticket-well {
+  cursor: pointer;
 }

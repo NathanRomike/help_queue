@@ -9,6 +9,10 @@ export default Ember.Route.extend({
     saveTicket(params) {
       var newTicket = this.store.createRecord('ticket', params);
       newTicket.save();
+    },
+
+    deleteTicket(ticket) {
+      ticket.destroyRecord();
     }
   }
 });

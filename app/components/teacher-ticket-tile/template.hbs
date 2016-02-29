@@ -1,8 +1,9 @@
-<div class="container">
-  <div class="well well-sm">
-    <h1>{{pair}} <span class="float-right {{color-location ticket.location}}">{{ticket.location}}</span></h1>
-    <p>{{ticket.question}}</p>
-    <h1>{{cTime}}</h1>
-    <h4 class="{{time-color cTime}}">{{moment-from-now cTime}}</h4>
+<div class="container ticket-well" {{action 'closeTicket' ticket}}>
+  <div class="well well-sm {{time-color cTime}}">
+    <div class="">
+      <h1>{{pair}} <span class="float-right {{color-location ticket.location}}">{{ticket.location}}</span></h1>
+      <p>{{ticket.question}}</p>
+      <h4>{{moment-from-now cTime}}</h4>
+    </div>
   </div>
 </div>
