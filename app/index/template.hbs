@@ -3,8 +3,21 @@
     {{ticket-new saveTicket="saveTicket"}}
   </div>
   <div class="col-md-6">
+    <h2>Pending:</h2>
     {{#each model as |ticket|}}
-      {{ticket-tile ticket=ticket deleteTicket='deleteTicket' student=ticket}}
+      {{#unless ticket.isSolved}}
+      <div class="pending">
+        {{ticket-tile ticket=ticket deleteTicket='deleteTicket' student=ticket}}
+      </div>
+      {{/unless}}
+    {{/each}}
+    <h2>Resolved:</h2>
+    {{#each model as |ticket|}}
+      {{#if ticket.isSolved}}
+      <div class="solved">
+        {{ticket-tile ticket=ticket deleteTicket='deleteTicket' student=ticket}}
+      </div>
+      {{/if}}
     {{/each}}
   </div>
 </div>
