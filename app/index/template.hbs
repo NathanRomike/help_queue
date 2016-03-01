@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-6">
     {{#each model as |ticket|}}
-      {{ticket-tile ticket=ticket deleteTicket='deleteTicket'}}
+      {{ticket-tile ticket=ticket deleteTicket='deleteTicket' student=ticket}}
     {{/each}}
   </div>
 </div>

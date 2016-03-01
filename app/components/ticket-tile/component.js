@@ -10,6 +10,12 @@ export default Ember.Component.extend({
       if (confirm('Do you really want to delete this ticket?')) {
         this.sendAction('deleteTicket', ticket);
       }
+    },
+
+    updateRating(params) {
+      const {item: ticket, rating} = params;
+      this.ticket.set('rating', rating);
+      return ticket.save();
     }
   }
 });

@@ -1,0 +1,5 @@
+{{#each model as |ticket|}}
+  {{#if ticket.isSolved}}
+    {{ticket-tile ticket=ticket}}
+  {{/if}}
+{{/each}}

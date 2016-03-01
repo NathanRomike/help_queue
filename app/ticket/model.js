@@ -7,4 +7,5 @@ export default DS.Model.extend({
   question: DS.attr(),
   timestamp: DS.attr(),
   isSolved: DS.attr(),
+  rating: DS.attr()
 });

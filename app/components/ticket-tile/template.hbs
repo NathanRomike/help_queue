@@ -1,4 +1,12 @@
-<div class="well ticket-well" {{action 'closeTicket' ticket}}>
-  <h3>{{pair}}</h3>
-  <p>{{ticket.question}}</p>
-</div>
+{{#if student}}
+  <div class="well ticket-well" {{action 'closeTicket' ticket}}>
+    <h3>{{pair}}</h3>
+    <p>{{ticket.question}}</p>
+  </div>
+{{else}}
+  <div class="well ticket-well">
+    <h3>{{pair}}</h3>
+    <p>{{ticket.question}}</p>
+    {{star-rating item=ticket rating=ticket.rating on-click="updateRating"}}
+  </div>
+{{/if}}
